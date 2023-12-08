@@ -1,0 +1,66 @@
+
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-2.1.xsd"
+          name="order" displayName="Order REST API" version="2.0.0">
+
+    <resource name="party1" require-authentication="anonymous-all">
+        <method type="get" require-authentication="anonymous-all">
+            <service name="tutorial.order.OrderServices.get#FemalePersons"/>
+        </method>
+        <resource name="party2" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#Persons"/>
+            </method>
+        </resource>
+    </resource>
+
+    <resource name="orders" require-authentication="anonymous-all">
+        <method type="get" require-authentication="anonymous-all">
+            <service name="tutorial.order.OrderServices.get#OrderHeadersByStatus"/>
+        </method>
+        <resource name="orders1" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#LatestOrders"/>
+            </method>
+        </resource>
+        <resource name="orders2" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#Order"/>
+            </method>
+        </resource>
+        <resource name="orders3" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#OrderHeaders"/>
+            </method>
+        </resource>
+        <resource name="orders4" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#OrderParts"/>
+            </method>
+        </resource>
+        <resource name="orders5" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#OrderItems"/>
+            </method>
+        </resource>
+        <resource name="orders6" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#OrderParts"/>
+            </method>
+        </resource>
+        <resource name="orders7" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#OrderPartData"/>
+            </method>
+        </resource>
+        <resource name="orders8" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#OrderPartsCount"/>
+            </method>
+        </resource>
+        <resource name="orders9" require-authentication="anonymous-all">
+            <method type="get" require-authentication="anonymous-all">
+                <service name="tutorial.order.OrderServices.get#OrderPartsInfo"/>
+            </method>
+        </resource>
+    </resource>
+</resource>
